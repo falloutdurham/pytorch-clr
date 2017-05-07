@@ -1,11 +1,11 @@
 # pytorch-clr
 Port of Cyclic Learning Rates to PyTorch
 
-This class (partially) implements the 'triangular' and 'triangular2' polices found in Leslie N. Smith's [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/abs/1506.01186) paper. It alters the learning rate on a per-epoch basis between a minimum learning rate and a maximum learning rate, depending on a cycle defined by the initialization parameters.
+This class (partially) implements the 'triangular' and 'triangular2' polices found in Leslie N. Smith's [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/abs/1506.01186) paper. It alters the learning rate between a minimum learning rate and a maximum learning rate, depending on a cycle defined by the initialization parameters.
 
 ## Limitations
 
-Ideally, the learning rate should be changed on a per-batch basis rather than an epoch. I may produce a new version based using [torchsample](https://github.com/ncullen93/torchsample) to get easy access to per-batch callbacks, but I also wanted to produce a pure PyTorch version. 
+Ideally, the learning rate should be changed on a per-batch basis rather than an epoch, so you'll have to add in scaffolding into your train() methods to do that…or else just run this on a per-epoch basis for simplicity. I may produce a new version based using [torchsample](https://github.com/ncullen93/torchsample) to get easy access to per-batch callbacks, but I also wanted to produce a pure PyTorch version. 
     
 ## Usage    
     
